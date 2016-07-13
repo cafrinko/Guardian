@@ -1,0 +1,32 @@
+body
+  width: 100%
+  background: lightgrey
+
+.wrapper
+  @include outer-container(120em)
+  background: white
+  +clearfix
+  border: 2px solid orange
+  height: 100em
+
+@media screen and (max-width: 739px)
+.card-1, .card-2
+  @include span-columns(12 of 12)
+
+@media screen and (min-width: 740px) and (max-width: 1139px)
+.first-row, .second-row, .third-row, .fourth-row
+  @include span-columns(12)
+  border: 2px solid lightblue
+  width: 95%
+  height: 20em
+  margin: 1em 2em 1em 2em
+
+.first-row .card-1
+  @include span-columns (9 of 12)
+  background-color: red
+  height: 320px
+
+.first-row .card-2
+  @include span-columns (3 of 12)
+  background-color: green
+  height: 320px
