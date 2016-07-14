@@ -3,78 +3,75 @@ body
   background: lightgrey
 
 .wrapper
-  @include outer-container(120em)
+  @include outer-container($outer-row-height )
   background: white
   +clearfix
-  border: 2px solid orange
   max-width: 100%
   height: 242.75em
 
 @media screen and (max-width: 739px)
-  // .outer-first-row
-  //   .one
-  //     @include span-columns(12 of 12)
-  //     width: 95%
-  //     height: 25em
-  //     background: lightyellow
-  //     border: 2px solid lightblue
-  //     margin: 2.5% 2.5% 0 2.5%
-  //     position: relative
-  //     .top-row
-  //       img
-  //         @include span-columns(12 of 12)
-  //         max-width: 100%
-  //         height: auto
-  //         position: absolute
-  //         top: -0.1em
-  //       .title
-  //         position: absolute
-  //         top: 2em
-  //         h4
-  //           @include span-columns(12 of 12)
-  //           max-width: 100%
-  //           height: auto
-  //           position: absolute
-  //           top: 15em
-  //       p
-  //         position: absolute
-  //         top: 20em
-  //   .bottom-row
-  //     .left p
-  //       position: absolute
-  //       top: 15em
-  //   .bottom-row
-  //     .middle, .right
-  //       p
-  //         display: none
+  .outer-first-row
+    .one
+      @include span-columns(12 of 12)
+      width: 95%
+      height: 25em
+      background: lightyellow
+      border: 2px solid lightblue
+      margin: 2.5% 2.5% 0 2.5%
+      position: relative
+      .top-row
+        img
+          @include span-columns(12 of 12)
+          max-width: 100%
+          height: auto
+          position: absolute
+          top: -0.1em
+        .title
+          position: absolute
+          top: 2em
+          h4
+            @include span-columns(12 of 12)
+            max-width: 100%
+            height: auto
+            position: absolute
+            top: 15em
+        p
+          position: absolute
+          top: $outer-row-height
+          display: block
+    .bottom-row
+      .left p
+        position: absolute
+        top: 15em
+    .bottom-row
+      .middle, .right
+        p
+          display: none
 
 @media screen and (min-width: 740px) and (max-width: 1139px)
   .outer-first-row, .outer-second-row
     @include span-columns(12)
-    border: 2px solid lightblue
+
     width: 95%
-    height: 20em
+    height: $outer-row-height
     margin: 2.5% 2.5% 0 2.5%
     +inline-block
   .outer-first-row
     .one
       @include span-columns(9 of 12)
-      border: 2px solid lightblue
       // opacity: 0.5
-      height: 20em
+      height: $outer-row-height
       .top-row
         @include span-columns(12 of 12)
         height: 13em
         border: 2px solid black
         .left
           @include span-columns(4 of 12)
-          border: 2px dotted darkgrey
           height: 13em
           margin: 0 0 0 1%
           padding: 0
         .right
           @include span-columns(8 of 12)
-          border: 2px solid darkgrey
           height: 12em
           margin: 0
           padding: 0
@@ -89,11 +86,9 @@ body
           @include card1BottomCardlets
     .two
       @include span-columns(3 of 12)
-      border: 2px solid darkgrey
-      height: 20em
+      height: $outer-row-height
       .top
         @include span-columns(12 of 12)
-        border: 2px solid darkgrey
         height: 7em
         margin-bottom: 1em
         img
@@ -101,7 +96,6 @@ body
           height: 7em
       .middle
         @include span-columns(12 of 12)
-        border: 2px solid darkgrey
         height: 5em
         margin-bottom: 1em
         h5
@@ -109,25 +103,22 @@ body
           height: 5em
       .bottom
         @include span-columns(12 of 12)
-        border: 2px solid darkgrey
         height: 5em
         p
           @include span-columns(12 of 12)
           height: 5em
-
+          display: block
   .outer-second-row
     .one
       @include span-columns(6 of 12)
-      height: 20em
+      height: $outer-row-height
       float: left
       margin: 0
       .top-row, .bottom-row
         @include span-columns(12 of 12)
         padding: 0
-        border: 2px solid darkgrey
         .left, .right
           @include span-columns(6 of 12)
-          border: 2px solid darkgrey
           height: 11em
           img
             @include span-columns(12 of 12)
@@ -141,8 +132,7 @@ body
 
     .two
       @include span-columns(6 of 12)
-      border: 2px solid lightblue
-      height: 20em
+      height: $outer-row-height
       float: right
       margin: 0
       .inner-third-column
@@ -156,10 +146,10 @@ body
 
     .sidebar
       @include span-columns(2 of 12)
-      border: 3px solid purple
       height: 41em
       margin: 0 0 0 1.2%
       padding: 0
+
     .news
       @include span-columns(10 of 12)
       height: 41em
@@ -167,23 +157,21 @@ body
       padding: 0
       .outer-first-row, .outer-second-row
         @include span-columns(12)
-        border: 2px solid lightblue
         width: 95%
-        height: 20em
+        height: $outer-row-height
         margin: 1% 1% 0 1%
         +inline-block
       .outer-first-row
         .one
           @include span-columns(9 of 12)
-          border: 3px dotted orange
-          height: 20em
+          height: $outer-row-height
+          background: $card-background-color
+          height: 19.5em
           .top-row
             @include span-columns(12 of 12)
             height: 16em
-            border: 2px solid black
             .left
               @include span-columns(4 of 12)
-              border: 2px dotted darkgrey
               height: 16em
               margin: 0 0 0 1%
               padding: 0
@@ -199,7 +187,6 @@ body
                 color: darkgrey
             .right
               @include span-columns(8 of 12)
-              border: 2px solid darkgrey
               height: 16em
               margin: 0
               padding: 0
@@ -208,73 +195,81 @@ body
                 height: 16em
           .bottom-row
             @include span-columns(12 of 12)
-            height: 4em
-            border: 2px solid black
+            height: 3.5em
             .left, .middle, .right
               @include card1BottomCardlets
-              height: 4em
+              height: 3.5em
         .two
           @include span-columns(3 of 12)
-          border: 2px solid darkgrey
-          height: 20em
+          height: $outer-row-height
+          background: $card-background-color
+          height: 19.5em
           .top, .middle, .bottom
             @include card2Cardlets
           .top img, .middle h5, .bottom p
             @include span-columns(12 of 12)
-            // margin-bottom: 1em
           .top img
             height: 7em
           .middle h5, .bottom p
             height: 5em
+            padding: $card-padding
 
       .outer-second-row
         .one
           @include span-columns(6 of 12)
-          height: 20em
+          height: $outer-row-height
           float: left
           margin: 0
           .top-row, .bottom-row
             @include span-columns(12 of 12)
             padding: 0
-            border: 2px solid darkgrey
             .left, .right
               @include span-columns(6 of 12)
-              border: 2px solid darkgrey
               height: 12em
+              background-color: $card-background-color
+              padding: $card-padding
+              margin: 0
               img
                 @include span-columns(12 of 12)
+                border-top: $card-border-top
             .left
-              margin-right: 1%
+              margin-right: 2%
           .top-row
             .left, .right
               height: 7em
+          .bottom-row
+            .left, .right
+              height: 12.5em
         .two
           @include span-columns(6 of 12)
-          border: 2px solid darkgrey
-          height: 20em
+          height: $outer-row-height
           float: right
           margin: 0
           .inner-third-column
             @include innerColumns
-            margin: 0 0 1% 0
-            .one, .two, .three
-              @include span-columns(12 of 12)
-              height: 6.5em
-              p
-                @include span-columns(12 of 12)
-                height: 6.5em
-          .inner-fourth-column
-            @include span-columns(6 of 12)
-            height: 20em
             .cardlet
-              @include span-columns(12 of 12)
-              height: 6.5em
-              margin: 0 0 1% 0
-              padding: 0
-              border: 2px solid darkgrey
+              background-color: $card-background-color
+              margin: 0 1% 5% 0
+              height: 6em
+              border-top: $card-border-top
+              padding: $card-padding
               .one, .two, .three
                 @include span-columns(12 of 12)
-                height: 6.5em
+                height: 5.5em
+                p
+                  @include span-columns(12 of 12)
+                  height: 5.5em
+          .inner-fourth-column
+            @include innerColumns
+            .cardlet
+              background-color: $card-background-color
+              margin: 0 0 5% 0
+              height: 6em
+              border-top: $card-border-top
+              padding: $card-padding
+              .one, .two, .three
+                @include span-columns(12 of 12)
+                height: 5.75em
                 p
                   @include span-columns(6 of 12)
-                  height: 6.5em
+                  height: 5.5em

@@ -1,21 +1,26 @@
 @mixin card1BottomCardlets
   @include span-columns(4 of 12)
   height: 7em
-  border: 2px solid lightblue
+
 
 @mixin innerColumns
   @include span-columns(6 of 12)
   height: 20em
-  border: 2px solid lightblue
   .cardlet
     @include span-columns(12 of 12)
     height: 6.5em
     margin: 0 0 2% 0
     padding: 0
-    border: 2px solid lightblue
 
 @mixin card2Cardlets
   @include span-columns(12 of 12)
-  border: 2px solid darkgrey
   height: 6em
-  margin-bottom: 1em 
+  margin-bottom: 1em
+
+// @mixin button
+//   +button(pill, white)
+//   border: 1px solid #4bc6df
+  background-color: white
+//   height: 2em
+//   width: 8em
+//   color: #005689
