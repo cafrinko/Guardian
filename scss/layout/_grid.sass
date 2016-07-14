@@ -33,18 +33,18 @@ body
   .outer-first-row
     .one
       @include span-columns(9 of 12)
-      background-color: lightpink
+      background: lightpink
       opacity: 0.5
       height: 20em
     .two
       @include span-columns(3 of 12)
-      background-color: lightgreen
+      background: lightgreen
       opacity: 0.5
       height: 20em
   .outer-second-row
     .one
       @include span-columns(6 of 12)
-      background-color: lightpink
+      background: lightpink
       opacity: 0.5
       height: 20em
       float: left
@@ -58,7 +58,7 @@ body
         margin-right: 2%
     .two
       @include span-columns(6 of 12)
-      background-color: lightgreen
+      background: lightgreen
       opacity: 0.5
       height: 20em
       float: right
@@ -82,3 +82,80 @@ body
           margin: 0 0 2% 0
           padding: 0
           background: silver
+
+@media screen and (min-width: 1140px)
+  .wrapper
+    width: 90%
+    .sidebar
+      @include span-columns(2 of 12)
+      background: purple
+      opacity: 0.5
+      height: 41em
+      margin: 0 0 0 1.2%
+      padding: 0
+    .news
+      @include span-columns(10 of 12)
+      background: darkgreen
+      opacity: 0.5
+      height: 41em
+      margin: 0
+      padding: 0
+      .outer-first-row, .outer-second-row
+        @include span-columns(12)
+        border: 2px solid lightblue
+        width: 95%
+        height: 20em
+        margin: 1% 1% 0 1%
+        +inline-block
+      .outer-first-row
+        .one
+          @include span-columns(9 of 12)
+          background: lightpink
+          opacity: 0.5
+          height: 20em
+        .two
+          @include span-columns(3 of 12)
+          background: lightgreen
+          opacity: 0.5
+          height: 20em
+      .outer-second-row
+        .one
+          @include span-columns(6 of 12)
+          background: lightpink
+          opacity: 0.5
+          height: 20em
+          float: left
+          margin: 0
+          .one, .two
+            @include span-columns(6 of 12)
+            background: firebrick
+            // opacity: 0.5
+            height: 20em
+          .one
+            margin-right: 1%
+        .two
+          @include span-columns(6 of 12)
+          background: lightgreen
+          opacity: 0.5
+          height: 20em
+          float: right
+          margin: 0
+          .inner-third-column
+            @include span-columns(6 of 12)
+            height: 20em
+            background: blue
+            .cardlet
+              @include span-columns(12 of 12)
+              height: 6.5em
+              margin: 0 0 1% 0
+              padding: 0
+              background: silver
+          .inner-fourth-column
+            @include span-columns(6 of 12)
+            height: 20em
+            .cardlet
+              @include span-columns(12 of 12)
+              height: 6.5em
+              margin: 0 0 1% 0
+              padding: 0
+              background: silver
