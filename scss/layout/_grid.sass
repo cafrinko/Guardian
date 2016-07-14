@@ -33,17 +33,17 @@ body
   .outer-first-row
     .one
       @include span-columns(9 of 12)
-      background: lightpink
-      opacity: 0.5
+      border: 2px solid lightblue
+      // opacity: 0.5
       height: 20em
       .top-row
         @include span-columns(12 of 12)
-        height: 12em
+        height: 13em
         border: 2px solid black
         .left
           @include span-columns(4 of 12)
           border: 2px dotted darkgrey
-          height: 12em
+          height: 13em
           margin: 0 0 0 1%
           padding: 0
           // h4
@@ -64,63 +64,102 @@ body
           //   height: 12em
       .bottom-row
         @include span-columns(12 of 12)
-        height: 8em
+        height: 7em
         border: 2px solid black
         .left
           @include span-columns(4 of 12)
-          height: 8em
-          background: green
+          height: 7em
+          border: 2px solid lightblue
         .middle
           @include span-columns(4 of 12)
-          height: 8em
-          background: green
+          height: 7em
+          border: 2px solid lightblue
         .right
           @include span-columns(4 of 12)
-          height: 8em
-          background: green
+          height: 7em
+          border: 2px solid lightblue
+
     .two
       @include span-columns(3 of 12)
-      background: lightgreen
-      opacity: 0.5
+      // background: lightgreen
+      // opacity: 0.5
+      border: 2px solid darkgrey
       height: 20em
-      img
+      .top
         @include span-columns(12 of 12)
-        height: 6em
+        border: 2px solid darkgrey
+        height: 7em
+        // background: yellow
+        margin-bottom: 1em
+        img
+          @include span-columns(12 of 12)
+          height: 7em
+      .middle
+        @include span-columns(12 of 12)
+        border: 2px solid darkgrey
+        height: 5em
+        // background: yellow
+        margin-bottom: 1em
+        h5
+          @include span-columns(12 of 12)
+          height: 5em
+      .bottom
+        @include span-columns(12 of 12)
+        border: 2px solid darkgrey
+        height: 5em
+        // background: yellow
+        p
+          @include span-columns(12 of 12)
+          height: 5em
+
   .outer-second-row
     .one
       @include span-columns(6 of 12)
-      background: lightpink
-      opacity: 0.5
+      // background: lightpink
+      // opacity: 0.5
       height: 20em
       float: left
       margin: 0
-      .one, .two
-        @include span-columns(6 of 12)
-        background: firebrick
-        // opacity: 0.5
-        height: 20em
-        img
-          @include span-columns(12 of 12)
-          height: 6em
-      .one
-        margin-right: 2%
+      .top-row, .bottom-row
+        @include span-columns(12 of 12)
+        padding: 0
+        // height: 10em
+        border: 2px solid darkgrey
+        // background: green
+        .left, .right
+          @include span-columns(6 of 12)
+          border: 2px solid darkgrey
+          // background: firebrick
+          // opacity: 0.5
+          height: 11em
+          img
+            @include span-columns(12 of 12)
+            // height: 7em
+        .left
+          margin-right: 1%
+      .top-row
+        .left, .right
+          height: 8em
+      .bottom-row
+      height: 6em
+
     .two
       @include span-columns(6 of 12)
-      background: lightgreen
-      opacity: 0.5
+      border: 2px solid lightblue
+      // opacity: 0.5
       height: 20em
       float: right
       margin: 0
       .inner-third-column
         @include span-columns(6 of 12)
         height: 20em
-        background: blue
+        border: 2px solid lightblue
         .cardlet
           @include span-columns(12 of 12)
           height: 6.5em
           margin: 0 0 2% 0
           padding: 0
-          background: silver
+          border: 2px solid lightblue
       .inner-fourth-column
         @include span-columns(6 of 12)
         height: 20em
@@ -129,7 +168,7 @@ body
           height: 6.5em
           margin: 0 0 2% 0
           padding: 0
-          background: silver
+          border: 2px solid lightblue
 
 @media screen and (min-width: 1140px)
   .wrapper
