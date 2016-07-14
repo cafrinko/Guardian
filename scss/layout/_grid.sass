@@ -10,17 +10,43 @@ body
   max-width: 100%
   height: 242.75em
 
-// @media screen and (max-width: 739px)
-.card
-  @media screen and (max-width: 739px)
-    // @include outer-container
-    @include span-columns(12 of 12)
-    width: 95%
-    height: 20em
-    background: lightyellow
-    border: 2px solid lightblue
-    margin: 2.5% 2.5% 0 2.5%
-
+@media screen and (max-width: 739px)
+  // .outer-first-row
+  //   .one
+  //     @include span-columns(12 of 12)
+  //     width: 95%
+  //     height: 25em
+  //     background: lightyellow
+  //     border: 2px solid lightblue
+  //     margin: 2.5% 2.5% 0 2.5%
+  //     position: relative
+  //     .top-row
+  //       img
+  //         @include span-columns(12 of 12)
+  //         max-width: 100%
+  //         height: auto
+  //         position: absolute
+  //         top: -0.1em
+  //       .title
+  //         position: absolute
+  //         top: 2em
+  //         h4
+  //           @include span-columns(12 of 12)
+  //           max-width: 100%
+  //           height: auto
+  //           position: absolute
+  //           top: 15em
+  //       p
+  //         position: absolute
+  //         top: 20em
+  //   .bottom-row
+  //     .left p
+  //       position: absolute
+  //       top: 15em
+  //   .bottom-row
+  //     .middle, .right
+  //       p
+  //         display: none
 
 @media screen and (min-width: 740px) and (max-width: 1139px)
   .outer-first-row, .outer-second-row
@@ -46,50 +72,29 @@ body
           height: 13em
           margin: 0 0 0 1%
           padding: 0
-          // h4
-          //   @include span-columns(12 of 12)
-          //   height: 10em
-          //   font-size: 20px
-          //   font-weight: bold
-          //   span
-          //     color: darkblue
         .right
           @include span-columns(8 of 12)
           border: 2px solid darkgrey
           height: 12em
           margin: 0
           padding: 0
-          // img
-          //   @include span-columns(12 of 12)
-          //   height: 12em
+          img
+          max-width: 100%
+          height: auto
       .bottom-row
         @include span-columns(12 of 12)
         height: 7em
         border: 2px solid black
-        .left
-          @include span-columns(4 of 12)
-          height: 7em
-          border: 2px solid lightblue
-        .middle
-          @include span-columns(4 of 12)
-          height: 7em
-          border: 2px solid lightblue
-        .right
-          @include span-columns(4 of 12)
-          height: 7em
-          border: 2px solid lightblue
-
+        .left, .middle, .right
+          @include card1BottomCardlets
     .two
       @include span-columns(3 of 12)
-      // background: lightgreen
-      // opacity: 0.5
       border: 2px solid darkgrey
       height: 20em
       .top
         @include span-columns(12 of 12)
         border: 2px solid darkgrey
         height: 7em
-        // background: yellow
         margin-bottom: 1em
         img
           @include span-columns(12 of 12)
@@ -98,7 +103,6 @@ body
         @include span-columns(12 of 12)
         border: 2px solid darkgrey
         height: 5em
-        // background: yellow
         margin-bottom: 1em
         h5
           @include span-columns(12 of 12)
@@ -107,7 +111,6 @@ body
         @include span-columns(12 of 12)
         border: 2px solid darkgrey
         height: 5em
-        // background: yellow
         p
           @include span-columns(12 of 12)
           height: 5em
@@ -115,26 +118,19 @@ body
   .outer-second-row
     .one
       @include span-columns(6 of 12)
-      // background: lightpink
-      // opacity: 0.5
       height: 20em
       float: left
       margin: 0
       .top-row, .bottom-row
         @include span-columns(12 of 12)
         padding: 0
-        // height: 10em
         border: 2px solid darkgrey
-        // background: green
         .left, .right
           @include span-columns(6 of 12)
           border: 2px solid darkgrey
-          // background: firebrick
-          // opacity: 0.5
           height: 11em
           img
             @include span-columns(12 of 12)
-            // height: 7em
         .left
           margin-right: 1%
       .top-row
@@ -146,29 +142,13 @@ body
     .two
       @include span-columns(6 of 12)
       border: 2px solid lightblue
-      // opacity: 0.5
       height: 20em
       float: right
       margin: 0
       .inner-third-column
-        @include span-columns(6 of 12)
-        height: 20em
-        border: 2px solid lightblue
-        .cardlet
-          @include span-columns(12 of 12)
-          height: 6.5em
-          margin: 0 0 2% 0
-          padding: 0
-          border: 2px solid lightblue
+        @include innerColumns
       .inner-fourth-column
-        @include span-columns(6 of 12)
-        height: 20em
-        .cardlet
-          @include span-columns(12 of 12)
-          height: 6.5em
-          margin: 0 0 2% 0
-          padding: 0
-          border: 2px solid lightblue
+        @include innerColumns
 
 @media screen and (min-width: 1140px)
   .wrapper
@@ -176,16 +156,12 @@ body
 
     .sidebar
       @include span-columns(2 of 12)
-      // background: purple
-      // opacity: 0.5
       border: 3px solid purple
       height: 41em
       margin: 0 0 0 1.2%
       padding: 0
     .news
       @include span-columns(10 of 12)
-      // background: darkgreen
-      // opacity: 0.5
       height: 41em
       margin: 0
       padding: 0
@@ -199,8 +175,6 @@ body
       .outer-first-row
         .one
           @include span-columns(9 of 12)
-          // background: lightpink
-          // opacity: 0.5
           border: 3px dotted orange
           height: 20em
           .top-row
@@ -236,76 +210,39 @@ body
             @include span-columns(12 of 12)
             height: 4em
             border: 2px solid black
-            .left
-              @include span-columns(4 of 12)
+            .left, .middle, .right
+              @include card1BottomCardlets
               height: 4em
-              border: 2px solid darkgrey
-              // background: green
-            .middle
-              @include span-columns(4 of 12)
-              height: 4em
-              border: 2px solid darkgrey
-              // background: green
-            .right
-              @include span-columns(4 of 12)
-              height: 4em
-              border: 2px solid darkgrey
-              // background: green
         .two
           @include span-columns(3 of 12)
-          // background: lightgreen
-          // opacity: 0.5
           border: 2px solid darkgrey
           height: 20em
-          .top
+          .top, .middle, .bottom
+            @include card2Cardlets
+          .top img, .middle h5, .bottom p
             @include span-columns(12 of 12)
-            border: 2px solid darkgrey
+            // margin-bottom: 1em
+          .top img
             height: 7em
-            // background: yellow
-            margin-bottom: 1em
-            img
-              @include span-columns(12 of 12)
-              height: 7em
-          .middle
-            @include span-columns(12 of 12)
-            border: 2px solid darkgrey
+          .middle h5, .bottom p
             height: 5em
-            // background: yellow
-            margin-bottom: 1em
-            h5
-              @include span-columns(12 of 12)
-              height: 5em
-          .bottom
-            @include span-columns(12 of 12)
-            border: 2px solid darkgrey
-            height: 5em
-            // background: yellow
-            p
-              @include span-columns(12 of 12)
-              height: 5em
+
       .outer-second-row
         .one
           @include span-columns(6 of 12)
-          // background: lightpink
-          // opacity: 0.5
           height: 20em
           float: left
           margin: 0
           .top-row, .bottom-row
             @include span-columns(12 of 12)
             padding: 0
-            // height: 10em
             border: 2px solid darkgrey
-            // background: green
             .left, .right
               @include span-columns(6 of 12)
               border: 2px solid darkgrey
-              // background: firebrick
-              // opacity: 0.5
               height: 12em
               img
                 @include span-columns(12 of 12)
-                // height: 7em
             .left
               margin-right: 1%
           .top-row
@@ -313,30 +250,19 @@ body
               height: 7em
         .two
           @include span-columns(6 of 12)
-          // background: lightgreen
-          // opacity: 0.5
           border: 2px solid darkgrey
           height: 20em
           float: right
           margin: 0
           .inner-third-column
-            @include span-columns(6 of 12)
-            height: 20em
-            border: 2px solid darkgrey
-            // background: blue
-            .cardlet
+            @include innerColumns
+            margin: 0 0 1% 0
+            .one, .two, .three
               @include span-columns(12 of 12)
               height: 6.5em
-              margin: 0 0 1% 0
-              padding: 0
-              border: 2px solid darkgrey
-              // background: black
-              .one, .two, .three
+              p
                 @include span-columns(12 of 12)
                 height: 6.5em
-                p
-                  @include span-columns(6 of 12)
-                  height: 6.5em
           .inner-fourth-column
             @include span-columns(6 of 12)
             height: 20em
