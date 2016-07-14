@@ -36,11 +36,56 @@ body
       background: lightpink
       opacity: 0.5
       height: 20em
+      .top-row
+        @include span-columns(12 of 12)
+        height: 12em
+        border: 2px solid black
+        .left
+          @include span-columns(4 of 12)
+          border: 2px dotted darkgrey
+          height: 12em
+          margin: 0 0 0 1%
+          padding: 0
+          // h4
+          //   @include span-columns(12 of 12)
+          //   height: 10em
+          //   font-size: 20px
+          //   font-weight: bold
+          //   span
+          //     color: darkblue
+        .right
+          @include span-columns(8 of 12)
+          border: 2px solid darkgrey
+          height: 12em
+          margin: 0
+          padding: 0
+          // img
+          //   @include span-columns(12 of 12)
+          //   height: 12em
+      .bottom-row
+        @include span-columns(12 of 12)
+        height: 8em
+        border: 2px solid black
+        .left
+          @include span-columns(4 of 12)
+          height: 8em
+          background: green
+        .middle
+          @include span-columns(4 of 12)
+          height: 8em
+          background: green
+        .right
+          @include span-columns(4 of 12)
+          height: 8em
+          background: green
     .two
       @include span-columns(3 of 12)
       background: lightgreen
       opacity: 0.5
       height: 20em
+      img
+        @include span-columns(12 of 12)
+        height: 6em
   .outer-second-row
     .one
       @include span-columns(6 of 12)
@@ -54,6 +99,9 @@ body
         background: firebrick
         // opacity: 0.5
         height: 20em
+        img
+          @include span-columns(12 of 12)
+          height: 6em
       .one
         margin-right: 2%
     .two
@@ -86,6 +134,7 @@ body
 @media screen and (min-width: 1140px)
   .wrapper
     width: 90%
+
     .sidebar
       @include span-columns(2 of 12)
       background: purple
@@ -113,26 +162,101 @@ body
           background: lightpink
           opacity: 0.5
           height: 20em
+          .top-row
+            @include span-columns(12 of 12)
+            height: 16em
+            border: 2px solid black
+            .left
+              @include span-columns(4 of 12)
+              border: 2px dotted darkgrey
+              height: 16em
+              margin: 0 0 0 1%
+              padding: 0
+              h4
+                @include span-columns(12 of 12)
+                height: 10em
+                font-size: 20px
+                font-weight: bold
+                span
+                  color: darkblue
+              p
+                // height: 7em
+                color: darkgrey
+            .right
+              @include span-columns(8 of 12)
+              border: 2px solid darkgrey
+              height: 16em
+              margin: 0
+              padding: 0
+              img
+                @include span-columns(12 of 12)
+                height: 16em
+          .bottom-row
+            @include span-columns(12 of 12)
+            height: 4em
+            border: 2px solid black
+            .left
+              @include span-columns(4 of 12)
+              height: 4em
+              background: green
+            .middle
+              @include span-columns(4 of 12)
+              height: 4em
+              background: green
+            .right
+              @include span-columns(4 of 12)
+              height: 4em
+              background: green
         .two
           @include span-columns(3 of 12)
           background: lightgreen
           opacity: 0.5
           height: 20em
+          .top
+            @include span-columns(12 of 12)
+            height: 7em
+            background: yellow
+            margin-bottom: 1em
+            img
+              @include span-columns(12 of 12)
+              height: 7em
+          .middle
+            @include span-columns(12 of 12)
+            height: 5em
+            background: yellow
+            margin-bottom: 1em
+            h5
+              @include span-columns(12 of 12)
+              height: 5em
+          .bottom
+            @include span-columns(12 of 12)
+            height: 5em
+            background: yellow
+            p
+              @include span-columns(12 of 12)
+              height: 5em
       .outer-second-row
         .one
           @include span-columns(6 of 12)
-          background: lightpink
+          // background: lightpink
           opacity: 0.5
           height: 20em
           float: left
           margin: 0
-          .one, .two
-            @include span-columns(6 of 12)
-            background: firebrick
-            // opacity: 0.5
-            height: 20em
-          .one
-            margin-right: 1%
+          .top-row, .bottom-row
+            @include span-columns(12 of 12)
+            height: 8em
+            background: green
+            .left, .right
+              @include span-columns(6 of 12)
+              // background: firebrick
+              // opacity: 0.5
+              height: 12em
+              img
+                @include span-columns(12 of 12)
+                height: 8em
+            .left
+              margin-right: 1%
         .two
           @include span-columns(6 of 12)
           background: lightgreen
@@ -149,7 +273,13 @@ body
               height: 6.5em
               margin: 0 0 1% 0
               padding: 0
-              background: silver
+              background: black
+              .one, .two, .three
+                @include span-columns(12 of 12)
+                height: 6.5em
+                p
+                  @include span-columns(6 of 12)
+                  height: 6.5em
           .inner-fourth-column
             @include span-columns(6 of 12)
             height: 20em
