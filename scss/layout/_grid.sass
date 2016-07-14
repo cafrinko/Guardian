@@ -137,15 +137,16 @@ body
 
     .sidebar
       @include span-columns(2 of 12)
-      background: purple
-      opacity: 0.5
+      // background: purple
+      // opacity: 0.5
+      border: 3px solid purple
       height: 41em
       margin: 0 0 0 1.2%
       padding: 0
     .news
       @include span-columns(10 of 12)
-      background: darkgreen
-      opacity: 0.5
+      // background: darkgreen
+      // opacity: 0.5
       height: 41em
       margin: 0
       padding: 0
@@ -159,8 +160,9 @@ body
       .outer-first-row
         .one
           @include span-columns(9 of 12)
-          background: lightpink
-          opacity: 0.5
+          // background: lightpink
+          // opacity: 0.5
+          border: 3px dotted orange
           height: 20em
           .top-row
             @include span-columns(12 of 12)
@@ -174,7 +176,7 @@ body
               padding: 0
               h4
                 @include span-columns(12 of 12)
-                height: 10em
+                height: 7em
                 font-size: 20px
                 font-weight: bold
                 span
@@ -198,40 +200,47 @@ body
             .left
               @include span-columns(4 of 12)
               height: 4em
-              background: green
+              border: 2px solid darkgrey
+              // background: green
             .middle
               @include span-columns(4 of 12)
               height: 4em
-              background: green
+              border: 2px solid darkgrey
+              // background: green
             .right
               @include span-columns(4 of 12)
               height: 4em
-              background: green
+              border: 2px solid darkgrey
+              // background: green
         .two
           @include span-columns(3 of 12)
-          background: lightgreen
-          opacity: 0.5
+          // background: lightgreen
+          // opacity: 0.5
+          border: 2px solid darkgrey
           height: 20em
           .top
             @include span-columns(12 of 12)
+            border: 2px solid darkgrey
             height: 7em
-            background: yellow
+            // background: yellow
             margin-bottom: 1em
             img
               @include span-columns(12 of 12)
               height: 7em
           .middle
             @include span-columns(12 of 12)
+            border: 2px solid darkgrey
             height: 5em
-            background: yellow
+            // background: yellow
             margin-bottom: 1em
             h5
               @include span-columns(12 of 12)
               height: 5em
           .bottom
             @include span-columns(12 of 12)
+            border: 2px solid darkgrey
             height: 5em
-            background: yellow
+            // background: yellow
             p
               @include span-columns(12 of 12)
               height: 5em
@@ -239,41 +248,50 @@ body
         .one
           @include span-columns(6 of 12)
           // background: lightpink
-          opacity: 0.5
+          // opacity: 0.5
           height: 20em
           float: left
           margin: 0
           .top-row, .bottom-row
             @include span-columns(12 of 12)
-            height: 8em
-            background: green
+            padding: 0
+            // height: 10em
+            border: 2px solid darkgrey
+            // background: green
             .left, .right
               @include span-columns(6 of 12)
+              border: 2px solid darkgrey
               // background: firebrick
               // opacity: 0.5
               height: 12em
               img
                 @include span-columns(12 of 12)
-                height: 8em
+                // height: 7em
             .left
               margin-right: 1%
+          .top-row
+            .left, .right
+              height: 7em
         .two
           @include span-columns(6 of 12)
-          background: lightgreen
-          opacity: 0.5
+          // background: lightgreen
+          // opacity: 0.5
+          border: 2px solid darkgrey
           height: 20em
           float: right
           margin: 0
           .inner-third-column
             @include span-columns(6 of 12)
             height: 20em
-            background: blue
+            border: 2px solid darkgrey
+            // background: blue
             .cardlet
               @include span-columns(12 of 12)
               height: 6.5em
               margin: 0 0 1% 0
               padding: 0
-              background: black
+              border: 2px solid darkgrey
+              // background: black
               .one, .two, .three
                 @include span-columns(12 of 12)
                 height: 6.5em
@@ -288,4 +306,10 @@ body
               height: 6.5em
               margin: 0 0 1% 0
               padding: 0
-              background: silver
+              border: 2px solid darkgrey
+              .one, .two, .three
+                @include span-columns(12 of 12)
+                height: 6.5em
+                p
+                  @include span-columns(6 of 12)
+                  height: 6.5em
