@@ -54,7 +54,8 @@ body {
   margin-right: auto;
   background: white;
   border: 2px solid orange;
-  height: 100em; }
+  max-width: 100%;
+  height: 242.75em; }
   .wrapper::after {
     clear: both;
     content: "";
@@ -64,46 +65,129 @@ body {
     content: "";
     display: block; }
 
-.card-1, .card-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .card-1:last-child, .card-2:last-child {
-    margin-right: 0; }
+@media screen and (max-width: 739px) {
+  .card {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    width: 95%;
+    height: 20em;
+    background: lightyellow;
+    border: 2px solid lightblue;
+    margin: 2.5% 2.5% 0 2.5%; }
+    .card:last-child {
+      margin-right: 0; } }
 
-.first-row, .second-row, .third-row, .fourth-row {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  border: 2px solid lightblue;
-  width: 95%;
-  height: 20em;
-  margin: 1em 2em 1em 2em; }
-  .first-row:last-child, .second-row:last-child, .third-row:last-child, .fourth-row:last-child {
-    margin-right: 0; }
+@media screen and (min-width: 740px) and (max-width: 1139px) {
+  .outer-first-row, .outer-second-row {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    border: 2px solid lightblue;
+    width: 95%;
+    height: 20em;
+    margin: 2.5% 2.5% 0 2.5%;
+    display: inline-block; }
+    .outer-first-row:last-child, .outer-second-row:last-child {
+      margin-right: 0; }
 
-.first-row .card-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  background-color: red;
-  height: 320px; }
-  .first-row .card-1:last-child {
-    margin-right: 0; }
+  .outer-first-row .one {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    background-color: lightpink;
+    opacity: 0.5;
+    height: 20em; }
+    .outer-first-row .one:last-child {
+      margin-right: 0; }
+  .outer-first-row .two {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    background-color: lightgreen;
+    opacity: 0.5;
+    height: 20em; }
+    .outer-first-row .two:last-child {
+      margin-right: 0; }
 
-.first-row .card-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  background-color: green;
-  height: 320px; }
-  .first-row .card-2:last-child {
-    margin-right: 0; }
-
+  .outer-second-row .one {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    background-color: lightpink;
+    opacity: 0.5;
+    height: 20em;
+    float: left;
+    margin: 0; }
+    .outer-second-row .one:last-child {
+      margin-right: 0; }
+    .outer-second-row .one .one, .outer-second-row .one .two {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      background: firebrick;
+      height: 20em; }
+      .outer-second-row .one .one:last-child, .outer-second-row .one .two:last-child {
+        margin-right: 0; }
+    .outer-second-row .one .one {
+      margin-right: 2%; }
+  .outer-second-row .two {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    background-color: lightgreen;
+    opacity: 0.5;
+    height: 20em;
+    float: right;
+    margin: 0; }
+    .outer-second-row .two:last-child {
+      margin-right: 0; }
+    .outer-second-row .two .inner-third-column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      height: 20em;
+      background: blue; }
+      .outer-second-row .two .inner-third-column:last-child {
+        margin-right: 0; }
+      .outer-second-row .two .inner-third-column .cardlet {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        height: 6.5em;
+        margin: 0 0 2% 0;
+        padding: 0;
+        background: silver; }
+        .outer-second-row .two .inner-third-column .cardlet:last-child {
+          margin-right: 0; }
+    .outer-second-row .two .inner-fourth-column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      height: 20em; }
+      .outer-second-row .two .inner-fourth-column:last-child {
+        margin-right: 0; }
+      .outer-second-row .two .inner-fourth-column .cardlet {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        height: 6.5em;
+        margin: 0 0 2% 0;
+        padding: 0;
+        background: silver; }
+        .outer-second-row .two .inner-fourth-column .cardlet:last-child {
+          margin-right: 0; } }
 ul {
   list-style-type: none; }
 
